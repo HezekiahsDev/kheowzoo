@@ -4,10 +4,18 @@ import Featured from "./components/Featured";
 
 export default function Home() {
   return (
-    <section id="home">
-      <Hero />
-      <Featured />
-      {/* Add more sections below as needed */}
-    </section>
+    <>
+      {/* Hero Section */}
+      <section id="home" className="scroll-mt-24">
+        <Hero />
+      </section>
+
+      {/* Featured Section */}
+      <section id="features" className="scroll-mt-24">
+        <Featured />
+      </section>
+
+      {/* Add more sections as needed, keeping the scroll-mt class for consistent scrolling behavior */}
+    </>
   );
 }
