@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Hero from "./components/Hero";
 import Featured from "./components/Featured";
@@ -28,7 +29,7 @@ export default function Home() {
       <section id="about" className="scroll-mt-24">
         <AboutKheowzoo />
       </section>
-      <section id="about" className="scroll-mt-24">
+      <section id="contact" className="scroll-mt-24">
         <Contact />
       </section>
       {/* Add more sections as needed, keeping the scroll-mt class for consistent scrolling behavior */}

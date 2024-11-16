@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-color-bg mt-12 py-8 border-t border-color-border">
+    <footer className="bg-black mt-12 py-8 border-t border-color-border">
       <div className="max-w-7xl mx-auto px-6 text-color-text flex flex-col md:flex-row justify-between items-center">
         {/* Logo and Description */}
         <div className="mb-4 md:mb-0 text-center md:text-left">
@@ -36,7 +36,7 @@ export default function Footer() {
         {/* Social Media Links */}
         <div className="flex space-x-4 text-color-primary">
           <Link
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/"
             aria-label="Facebook"
             target="_blank"
           >
@@ -50,7 +50,7 @@ export default function Footer() {
             </svg>
           </Link>
           <Link
-            href="https://www.twitter.com"
+            href="https://www.twitter.com/hezekiahsDev"
             aria-label="Twitter"
             target="_blank"
           >
@@ -64,7 +64,7 @@ export default function Footer() {
             </svg>
           </Link>
           <Link
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/hezekiahs.dev"
             aria-label="Instagram"
             target="_blank"
           >

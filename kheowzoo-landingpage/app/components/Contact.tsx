@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [activeTab, setActiveTab] = useState<
@@ -46,7 +47,14 @@ export default function Contact() {
         {/* Tab Content */}
         <div className="text-center">
           {activeTab === "faq" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              key="faq"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5 }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
               {/* FAQ Card 1 */}
               <div className="bg-gradient-to-t from-blue-500 to-blue-700 text-white shadow-lg rounded-lg p-6">
                 <h4 className="text-xl font-semibold mb-4">
@@ -82,11 +90,17 @@ export default function Contact() {
                   inquiries or issues you may encounter.
                 </p>
               </div>
-            </div>
+            </motion.div>
           )}
 
           {activeTab === "leaveMessage" && (
-            <div>
+            <motion.div
+              key="leaveMessage"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5 }}
+            >
               <h3 className="text-2xl font-bold mb-4">Leave a Message</h3>
               <form className="max-w-lg mx-auto space-y-4">
                 <div>
@@ -138,11 +152,17 @@ export default function Contact() {
                   Send Message
                 </button>
               </form>
-            </div>
+            </motion.div>
           )}
 
           {activeTab === "subscribe" && (
-            <div>
+            <motion.div
+              key="subscribe"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5 }}
+            >
               <h3 className="text-2xl font-bold mb-4">
                 Subscribe to Our Newsletter
               </h3>
@@ -172,7 +192,7 @@ export default function Contact() {
                   Subscribe
                 </button>
               </form>
-            </div>
+            </motion.div>
           )}
         </div>
       </div>
