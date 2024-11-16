@@ -14,7 +14,7 @@ export default function Header() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.3, // Adjust this value to determine when a section is considered in view
+      threshold: 0.2, // Adjust this value to determine when a section is considered in view
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -84,11 +84,11 @@ export default function Header() {
         {/* Action Button */}
         <div className="hidden md:block">
           <Link
-            href="#visit"
+            href="#contact"
             className="bg-color-primary text-color-bg py-2 px-4 rounded-lg hover:bg-opacity-90 transition-all"
             onClick={handleLinkClick}
           >
-            Plan Your Visit
+            Contact us
           </Link>
         </div>
 
@@ -108,7 +108,7 @@ export default function Header() {
       {/* Mobile Navigation Menu */}
       {menuOpen && (
         <div className="md:hidden bg-color-bg text-color-text space-y-4 py-4">
-          {["home", "Featured", "gallery", "event", "about", "contact"].map(
+          {["home", "featured", "gallery", "event", "about", "contact"].map(
             (section) => (
               <a
                 key={section}
@@ -123,11 +123,11 @@ export default function Header() {
             )
           )}
           <a
-            href="#visit"
+            href="#contact"
             className="block text-center bg-color-primary text-color-bg py-2 px-4 rounded-lg hover:bg-opacity-90 mx-6 mt-2"
             onClick={handleLinkClick}
           >
-            Plan Your Visit
+            Contact Us
           </a>
         </div>
       )}

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="hero-section bg-cover bg-center text-white flex flex-col justify-center items-center h-[80vh] md:h-[100vh] relative">
+    <div className="hero-section bg-cover bg-center text-white flex flex-col justify-center items-center h-[100vh] md:h-[100vh] relative">
       <div className="absolute inset-0 bg-black opacity-30"></div>{" "}
       {/* Overlay for text contrast */}
       <div className="z-10 px-4 max-w-4xl text-center">
@@ -14,7 +14,7 @@ export default function Hero() {
           Discover the wonders of wildlife and nature like never before.
         </p>
         <a
-          href="#about"
+          href="#featured"
           className="inline-block bg-color-primary text-color-bg py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition"
         >
           Explore More
