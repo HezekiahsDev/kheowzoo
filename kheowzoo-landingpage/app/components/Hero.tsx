@@ -3,15 +3,23 @@ import "animate.css";
 
 export default function Hero() {
   return (
-    <div className="hero-section bg-cover bg-center text-white flex flex-col justify-center items-center h-[100vh] md:h-[100vh] relative">
-      <div className="absolute inset-0 bg-black opacity-30"></div>{" "}
-      {/* Overlay for text contrast */}
+    <div
+      className="hero-section bg-cover bg-center text-white flex flex-col justify-center items-center h-[100vh] md:h-[100vh] relative"
+      style={{ backgroundImage: `url('/bg-banner.jpg')` }} // Adding the background image
+    >
+      <div className="absolute inset-0 bg-black opacity-80"></div>{" "}
+      {/* Dark overlay for text contrast */}
       <div className="z-10 px-4 max-w-4xl text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn animate__delay-1s">
           Welcome to Kheowzoo
         </h1>
+
         <p className="text-lg md:text-xl mb-6 animate__animated animate__fadeIn animate__delay-2s">
-          Discover the wonders of wildlife and nature like never before.
+          Explore the cutting edge of blockchain-powered conservation. Join a
+          community redefining the future of wildlife and Web3 technology.
+        </p>
+        <p className="text-lg italic md:text-xl font-thin mb-6 animate__animated animate__fadeIn animate__delay-2s">
+          Empowering Wildlife Through Technology — One Block at a Time.
         </p>
         <a
           href="#featured"
