@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black opacity-80"></div>{" "}
       {/* Dark overlay for text contrast */}
       <div className="z-10 px-4 max-w-4xl text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn animate__delay-1s">
+        <h1 className="text-3xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn animate__delay-1s">
           Welcome to Kheowzoo
         </h1>
 
