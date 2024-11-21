@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Image from "next/image"; // Importing Image from Next.js
+//import Image from "next/image"; // Importing Image from Next.js
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"; // Importing icons from Heroicons
 
 export default function Header() {
@@ -45,7 +45,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/">
+          {/* <Link href="/">
             <Image
               src="/Logo.png" // Path to your image in the public folder
               alt="Kheowzoo Logo"
@@ -53,7 +53,7 @@ export default function Header() {
               height={40} // Adjust the height as needed
               className="mr-2"
             />
-          </Link>
+          </Link> */}
           <div className="text-color-primary font-bold text-xl">
             <Link href="/">Kheowzoo</Link>
           </div>
