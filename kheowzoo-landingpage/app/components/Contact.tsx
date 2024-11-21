@@ -8,7 +8,7 @@ export default function Contact() {
   >("faq");
 
   return (
-    <section className="py-8" id="contact">
+    <section className="py-8 bg-gray-900 text-white" id="contact">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12 text-color-primary">
           Contact Us
@@ -19,7 +19,7 @@ export default function Contact() {
           <button
             onClick={() => setActiveTab("faq")}
             className={`px-6 py-2 font-semibold ${
-              activeTab === "faq" ? "text-color-primary" : "text-gray-600"
+              activeTab === "faq" ? "text-color-primary" : "text-gray-500"
             }`}
           >
             FAQs
@@ -29,7 +29,7 @@ export default function Contact() {
             className={`px-6 py-2 font-semibold ${
               activeTab === "leaveMessage"
                 ? "text-color-primary"
-                : "text-gray-600"
+                : "text-gray-500"
             }`}
           >
             Leave a Message
@@ -37,7 +37,7 @@ export default function Contact() {
           <button
             onClick={() => setActiveTab("subscribe")}
             className={`px-6 py-2 font-semibold ${
-              activeTab === "subscribe" ? "text-color-primary" : "text-gray-600"
+              activeTab === "subscribe" ? "text-color-primary" : "text-gray-500"
             }`}
           >
             Subscribe
@@ -55,39 +55,26 @@ export default function Contact() {
               transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
             >
-              {/* FAQ Card 1 */}
-              <div className="bg-gradient-to-t from-blue-500 to-blue-700 text-white shadow-lg rounded-lg p-6">
-                <h4 className="text-xl font-semibold mb-4">
-                  What is Kheowzoo?
-                </h4>
+              <div className="bg-gradient-to-t from-blue-500 to-blue-700 shadow-lg rounded-lg p-6">
+                <h4 className="text-xl font-semibold mb-4">What is Kheowzoo?</h4>
                 <p>
-                  Kheowzoo is a digital solution provider that empowers
-                  businesses with innovative technology and exceptional services
-                  to drive growth and efficiency.
+                  Kheowzoo is a Web3-powered platform offering cutting-edge solutions to bridge the gap between blockchain ecosystems and communities.
                 </p>
               </div>
-
-              {/* FAQ Card 2 */}
-              <div className="bg-gradient-to-t from-green-500 to-green-700 text-white shadow-lg rounded-lg p-6">
+              <div className="bg-gradient-to-t from-green-500 to-green-700 shadow-lg rounded-lg p-6">
                 <h4 className="text-xl font-semibold mb-4">
-                  How can I get started?
+                  How can I collaborate with Kheowzoo?
                 </h4>
                 <p>
-                  To get started, simply sign up on our platform, explore the
-                  services we offer, and reach out to us for personalized
-                  solutions tailored to your business needs.
+                  Collaboration is simple—connect with us through our contact form or email to explore how we can create value together in the Web3 space.
                 </p>
               </div>
-
-              {/* FAQ Card 3 */}
-              <div className="bg-gradient-to-t from-orange-500 to-orange-700 text-white shadow-lg rounded-lg p-6">
+              <div className="bg-gradient-to-t from-orange-500 to-orange-700 shadow-lg rounded-lg p-6">
                 <h4 className="text-xl font-semibold mb-4">
-                  Do you offer customer support?
+                  What services do you provide?
                 </h4>
                 <p>
-                  Yes, we offer 24/7 customer support. You can reach out to our
-                  team via email, chat, or phone for assistance with any
-                  inquiries or issues you may encounter.
+                  We offer blockchain integrations, NFT solutions, and community engagement tools tailored to meet diverse client needs.
                 </p>
               </div>
             </motion.div>
@@ -111,7 +98,7 @@ export default function Contact() {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full p-3 border border-gray-300 rounded-lg"
+                    className="w-full p-3 border border-gray-700 rounded-lg bg-gray-800 text-white"
                     placeholder="Enter your name"
                     required
                   />
@@ -125,7 +112,7 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full p-3 border border-gray-300 rounded-lg"
+                    className="w-full p-3 border border-gray-700 rounded-lg bg-gray-800 text-white"
                     placeholder="Enter your email"
                     required
                   />
@@ -138,7 +125,7 @@ export default function Contact() {
                   <textarea
                     id="message"
                     name="message"
-                    className="w-full p-3 border border-gray-300 rounded-lg"
+                    className="w-full p-3 border border-gray-700 rounded-lg bg-gray-800 text-white"
                     placeholder="Type your message here"
                     rows={4}
                     required
@@ -164,11 +151,10 @@ export default function Contact() {
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-2xl font-bold mb-4">
-                Subscribe to Our Newsletter
+                Subscribe to Our Updates
               </h3>
               <p className="mb-8">
-                Stay updated with the latest news and offers by subscribing to
-                our newsletter.
+                Be the first to know about our latest developments, launches, and exclusive content.
               </p>
               <form className="max-w-lg mx-auto space-y-4">
                 <div>
@@ -179,7 +165,7 @@ export default function Contact() {
                     type="email"
                     id="subscribeEmail"
                     name="subscribeEmail"
-                    className="w-full p-3 border border-gray-300 rounded-lg"
+                    className="w-full p-3 border border-gray-700 rounded-lg bg-gray-800 text-white"
                     placeholder="Enter your email"
                     required
                   />

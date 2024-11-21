@@ -43,42 +43,33 @@ export default function AboutKheowzoo() {
         <div className="text-center">
           {activeTab === "who" && (
             <div>
-              <h3 className="text-2xl font-bold mb-4">Who We Are</h3>
-              <p className="max-w-2xl mx-auto">
-                We are a passionate team dedicated to transforming the digital
-                landscape. At Kheowzoo, we blend creativity, innovation, and
-                technology to provide exceptional solutions that meet the needs
-                of businesses and individuals alike.
+              <h3 className="text-2xl font-bold mb-4 text-white">Who We Are</h3>
+              <p className="max-w-2xl mx-auto text-gray-300">
+                Kheowzoo is a cutting-edge initiative blending modern Web3 technologies to create a seamless bridge between blockchain ecosystems and global communities. We aim to showcase our commitment to innovation and inclusivity through unique digital experiences.
               </p>
             </div>
           )}
 
           {activeTab === "why" && (
             <div>
-              <h3 className="text-2xl font-bold mb-4">Why Us</h3>
-              <p className="max-w-2xl mx-auto">
-                With our industry expertise, cutting-edge technology, and
-                commitment to excellence, Kheowzoo offers unmatched value. Our
-                team thrives on solving complex challenges and delivering
-                innovative solutions that ensure customer satisfaction and
-                long-term success.
+              <h3 className="text-2xl font-bold mb-4 text-white">Why Us</h3>
+              <p className="max-w-2xl mx-auto text-gray-300">
+                With a strong foundation in Web3 technology, Kheowzoo stands out for its focus on community engagement and transparency. From integrating seamless blockchain interactions to offering versatile content libraries, we are the go-to platform for innovation-driven solutions.
               </p>
             </div>
           )}
 
           {activeTab === "vision" && (
             <div className="px-8">
-              <h3 className="text-2xl font-bold mb-4">Vision and Mission</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Vision and Mission</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Vision Card */}
                 <div className="bg-[#964B00] shadow-lg rounded-lg p-6 text-center">
                   <h4 className="text-xl font-semibold text-color-primary mb-4">
                     Our Vision
                   </h4>
-                  <p>
-                    Our vision is to become a global leader in innovative
-                    solutions, delivering exceptional value to our clients and
-                    making a meaningful impact on the world.
+                  <p className="text-white">
+                    To lead the global Web3 revolution by creating a digital ecosystem that fosters innovation, collaboration, and inclusivity while delivering unparalleled value.
                   </p>
                 </div>
 
@@ -87,11 +78,8 @@ export default function AboutKheowzoo() {
                   <h4 className="text-xl font-semibold text-color-primary mb-4">
                     Our Mission
                   </h4>
-                  <p>
-                    Our mission is to empower businesses and individuals through
-                    technology, providing reliable, scalable, and sustainable
-                    solutions that drive growth, efficiency, and positive
-                    change.
+                  <p className="text-white">
+                    Empowering users and communities through state-of-the-art technology, providing tools and platforms that promote growth, creativity, and sustainability.
                   </p>
                 </div>
               </div>
