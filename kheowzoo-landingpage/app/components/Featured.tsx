@@ -1,85 +1,101 @@
-import React from "react";
-import { motion } from "framer-motion"; // Import Framer Motion for animations
-import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer"; // To detect when element is in view
+import { useInView } from "react-intersection-observer";
+
+const getRandomImage = () => {
+  const randomIndex = Math.floor(Math.random() * 50) + 1;
+  return `/WebGallery/img${randomIndex}.jpg`;
+};
 
 export default function Featured() {
-  // Scroll trigger setup using useInView hook
   const { ref, inView } = useInView({
-    triggerOnce: true, // The animation will happen only once when it comes into view
-    threshold: 0.3, // Element is considered in view when 30% is visible
+    triggerOnce: true,
+    threshold: 0.3,
   });
+
+  const [randomImages, setRandomImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    const images = [getRandomImage(), getRandomImage(), getRandomImage()];
+    setRandomImages(images);
+  }, []);
 
   return (
     <section id="featured" className="mt-8 py-8">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12 text-color-primary">
-          Our Key Features
+          Learn More About the Project
         </h2>
 
         <motion.div
-          ref={ref} // Attach the ref to the element to track its visibility
-          initial={{ opacity: 0, y: 50 }} // Start position: hidden and offset
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
           animate={{
-            opacity: inView ? 1 : 0, // When in view, opacity becomes 1
-            y: inView ? 0 : 50, // When in view, the element moves to its final position
-            transition: { duration: 1.2 }, // Smooth transition for the effect
+            opacity: inView ? 1 : 0,
+            y: inView ? 0 : 50,
+            transition: { duration: 1.2 },
           }}
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-[#8B5C29] shadow-md rounded-lg p-6 flex flex-col items-center">
-              <Image
-                src="https://picsum.photos/120/120?random=1" // Random image from picsum
-                alt="Feature 1"
-                width={120}
-                height={120}
-                className="mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2 text-white">
-                Feature Title 1
-              </h3>
-              <p className="text-gray-300 text-center">
-                Brief description of this amazing feature that captivates the
-                audience.
+            <div
+              className="bg-cover bg-center shadow-md rounded-lg p-6 flex flex-col items-center"
+              style={{
+                backgroundImage: `url(${randomImages[0]})`,
+              }}
+            >
+              <h3 className="text-xl font-semibold mb-4 text-white">CoinGecko</h3>
+              <p className="text-gray-300 text-center mb-4">
+                View more about the project, its market data, and tokenomics.
               </p>
+              <a
+                href="https://www.coingecko.com/en/coins/khaokheowzoo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-color-primary text-color-bg py-2 px-6 rounded-lg text-lg hover:bg-opacity-90 transition transform hover:scale-105"
+              >
+                View on CoinGecko
+              </a>
             </div>
 
-            {/* Feature 2 */}
-            <div className="bg-[#8B5C29] shadow-md rounded-lg p-6 flex flex-col items-center">
-              <Image
-                src="https://picsum.photos/120/120?random=2" // Random image from picsum
-                alt="Feature 2"
-                width={120}
-                height={120}
-                className="mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2 text-white">
-                Feature Title 2
-              </h3>
-              <p className="text-gray-300 text-center">
-                Brief description of this amazing feature that captivates the
-                audience.
+            <div
+              className="bg-cover bg-center shadow-md rounded-lg p-6 flex flex-col items-center"
+              style={{
+                backgroundImage: `url(${randomImages[1]})`,
+              }}
+            >
+              <h3 className="text-xl font-semibold mb-4 text-white">Dexscreener</h3>
+              <p className="text-gray-300 text-center mb-4">
+                Track real-time trading data and liquidity of the token.
               </p>
+              <a
+                href="https://dexscreener.com/solana/5tcgq8g9t7yxupjmmqbytdxq6fj8kbwfmrvahfb9thg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-color-primary text-color-bg py-2 px-6 rounded-lg text-lg hover:bg-opacity-90 transition transform hover:scale-105"
+              >
+                View on Dexscreener
+              </a>
             </div>
 
-            {/* Feature 3 */}
-            <div className="bg-[#8B5C29] shadow-md rounded-lg p-6 flex flex-col items-center">
-              <Image
-                src="https://picsum.photos/120/120?random=3" // Random image from picsum
-                alt="Feature 3"
-                width={120}
-                height={120}
-                className="mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2 text-white">
-                Feature Title 3
-              </h3>
-              <p className="text-gray-300 text-center">
-                Brief description of this amazing feature that captivates the
-                audience.
+            <div
+              className="bg-cover bg-center shadow-md rounded-lg p-6 flex flex-col items-center"
+              style={{
+                backgroundImage: `url(${randomImages[2]})`,
+              }}
+            >
+              <h3 className="text-xl font-semibold mb-4 text-white">Dextools</h3>
+              <p className="text-black-300 text-center mb-4">
+                Analyze the trading pair and price performance of the token.
               </p>
+              <a
+                href="https://www.dextools.io/app/cn/solana/pair-explorer/5tCgQ8g9t7YxupJMmQBYTdXq6fJ8KbwFMrvAhfb9thG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-color-primary text-color-bg py-2 px-6 rounded-lg text-lg hover:bg-opacity-90 transition transform hover:scale-105"
+              >
+                View on Dextools
+              </a>
             </div>
           </div>
         </motion.div>
